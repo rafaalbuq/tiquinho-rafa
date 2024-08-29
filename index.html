@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Site Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #007bff;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+            margin-bottom: 20px;
+        }
+        .timer {
+            font-size: 2em;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nosso Tempo Juntos</h1>
+        <div class="timer" id="timer">
+            <!-- Temporizador vai aparecer aqui -->
+        </div>
+        <script>
+            // Data de início do relacionamento (formato: "YYYY-MM-DD")
+            const startDate = new Date("2023-08-29");
+            function updateTimer() {
+                const now = new Date();
+                const elapsedTime = now - startDate;
+                const days = Math.floor(elapsedTime / (1000 * 60 * 60 * 24));
+                document.getElementById('timer').innerText = `${days} dias juntos`;
+            }
+            setInterval(updateTimer, 1000);
+            updateTimer();
+        </script>
+        <h2>Fotos Nossas</h2>
+        <img src="https://photos.app.goo.gl/AYzAvpHUFpdwe9jn6" alt="Foto nossa 1">
+        <img src="https://photos.app.goo.gl/x27mo3AQuKYi8xND6" alt="Foto nossa 2">
+        <h2>Música Especial</h2>
+        <iframe src="https://www.youtube.com/watch?v=sElE_BfQ67s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</body>
+</html>nb 
